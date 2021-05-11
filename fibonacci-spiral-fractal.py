@@ -1,5 +1,5 @@
-# Python program for Plotting Fibonacci
-# spiral fractal using Turtle
+# Programa em python para plotar a espiral
+# fractal de fibonacci
 import turtle
 import math
 
@@ -10,10 +10,10 @@ def fiboPlot(n):
     square_a = a
     square_b = b
 
-    # Setting the colour of the plotting pen to blue
+    # Setando a cor da caneta para azul
     x.pencolor("blue")
 
-    # Drawing the first square
+    # Desenhando o primeiro quadrado
     x.forward(b * factor)
     x.left(90)
     x.forward(b * factor)
@@ -22,12 +22,12 @@ def fiboPlot(n):
     x.left(90)
     x.forward(b * factor)
 
-    # Proceeding in the Fibonacci Series
+    # Prosseguindo com a série Fibonacci
     temp = square_b
     square_b = square_b + square_a
     square_a = temp
 
-    # Drawing the rest of the squares
+    # Desenhando o resto dos quadrados
     for i in range(1, n):
         x.backward(square_a * factor)
         x.right(90)
@@ -37,18 +37,18 @@ def fiboPlot(n):
         x.left(90)
         x.forward(square_b * factor)
 
-        # Proceeding in the Fibonacci Series
+        # Prosseguindo com a série Fibonacci
         temp = square_b
         square_b = square_b + square_a
         square_a = temp
 
-    # Bringing the pen to starting point of the spiral plot
+    # Trazendo a caneta para o ponto inicial do gráfico espiral
     x.penup()
     x.setposition(factor, 0)
     x.seth(0)
     x.pendown()
 
-    # Setting the colour of the plotting pen to red
+    # Setando a cor da caneta para vermelho
     x.pencolor("red")
 
     # Fibonacci Spiral Plot

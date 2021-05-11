@@ -1,40 +1,40 @@
 import turtle
 
-# Screen() method to get screen
+# Screen() método para obter a tela
 wn = turtle.Screen()
 
-# creating tess object
+# criando objeto tess
 tess = turtle.Turtle()
 
 
 def triangle(x, y):
-    # it is used to draw out the pen
+    # é usado para tirar a caneta
     tess.penup()
 
-    # it is used to move curson at x
-    # and y position
+    # usado para mover o curso na posição x
+    # e y
     tess.goto(x, y)
 
-    # it is used to draw in the pen
+    # é usado para desenhar com a caneta
     tess.pendown()
     for i in range(3):
-        # move cursor 100 unit
-        # digit forward
+        # move o cursor 100 unidades
+        # para frente
         tess.forward(100)
 
-        # turn cursor 120 degree left
+        # move o cursor 120 graus para esquerda
         tess.left(120)
 
-        # Again,move cursor 100 unit
-        # digit forward
+        # Novamente, move o cursor 100 digitos
+        # para frente
         tess.forward(100)
 
 
-# special built in function to send current
-# position of cursor to traingle
+# função especial embutida para enviar corrente
+# posição do cursor para o triângulo
 turtle.onscreenclick(triangle, 1)
 
 turtle.listen()
 
-# hold the screen
+# deixa a tela
 turtle.done()
